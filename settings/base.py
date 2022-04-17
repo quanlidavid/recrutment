@@ -104,7 +104,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -163,7 +163,7 @@ LOGGING = {
 ### LDAP
 
 # The URL of the LDAP server.
-LDAP_AUTH_URL = "ldap://127.0.0.1:389"
+LDAP_AUTH_URL = "ldap://localhost:389"
 # Initiate TLS on connection.
 LDAP_AUTH_USE_TLS = False
 
@@ -192,7 +192,7 @@ LDAP_AUTH_CLEAN_USER_DATA = "django_python3_ldap.utils.clean_user_data"
 # The LDAP username and password of a user for querying the LDAP database for user
 # details. If None, then the authenticated user will be used for querying, and
 # the `ldap_sync_users` command will perform an anonymous query.
-LDAP_AUTH_CONNECTION_USERNAME = 'admin'
-LDAP_AUTH_CONNECTION_PASSWORD = 'admin_passwd_4_ldap'
+LDAP_AUTH_CONNECTION_USERNAME = None
+LDAP_AUTH_CONNECTION_PASSWORD = None
 
 AUTHENTICATION_BACKENDS = {"django_python3_ldap.auth.LDAPBackend", 'django.contrib.auth.backends.ModelBackend', }
